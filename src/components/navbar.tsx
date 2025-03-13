@@ -8,6 +8,7 @@ import { Download, Menu, X } from 'lucide-react';
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
   const isMobile = useIsMobile();
 
   const navLinks = [
@@ -15,12 +16,28 @@ export const Navbar = () => {
     { name: 'Compétences', href: '#skills' },
     { name: 'Éducation', href: '#education' },
     { name: 'Expérience', href: '#experience' },
+    { name: 'Portfolio', href: '#portfolio' },
     { name: 'Contact', href: '#contact' },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
+      
+      // Get all sections
+      const sections = document.querySelectorAll('section[id]');
+      
+      // Find the section that is currently in the viewport
+      let current = '';
+      sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const sectionHeight = section.getBoundingClientRect().height;
+        if (sectionTop <= 100 && sectionTop + sectionHeight > 100) {
+          current = section.getAttribute('id') || '';
+        }
+      });
+      
+      setActiveSection(current);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -53,7 +70,12 @@ export const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+              className={cn(
+                "text-sm font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full",
+                activeSection === link.href.substring(1) 
+                  ? "text-primary after:w-full" 
+                  : "text-muted-foreground hover:text-foreground"
+              )}
             >
               {link.name}
             </a>
@@ -84,7 +106,10 @@ export const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-lg font-medium py-2 border-b border-muted"
+              className={cn(
+                "text-lg font-medium py-2 border-b border-muted",
+                activeSection === link.href.substring(1) ? "text-primary" : ""
+              )}
               onClick={handleNavigationClick}
             >
               {link.name}

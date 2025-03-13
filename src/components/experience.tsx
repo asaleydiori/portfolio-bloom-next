@@ -6,6 +6,17 @@ import { BadgeCustom } from '@/components/ui/badge-custom';
 export const Experience = () => {
   const experiences = [
     {
+      period: "Depuis Janvier 2025",
+      position: "Développeur",
+      company: "Eco2lodgy",
+      location: "Niamey",
+      responsibilities: [
+        "Développement d'applications",
+        "Création de solutions logicielles",
+        "Implémentation de fonctionnalités"
+      ]
+    },
+    {
       period: "Depuis Juillet 2024",
       position: "Collaborateur",
       company: "YayiMake",
