@@ -18,10 +18,10 @@ export const Portfolio = () => {
       }
     },
     {
-      title: "Application mobile de gestion",
-      description: "Application mobile permettant la gestion des tâches et la coordination d'équipe pour les entreprises.",
+      title: "Application Desktop de gestion de stock",
+      description: "Application mobile permettant la gestion des stocks et des ventes dans les magazins Karma Logistique",
       image: "/image_original6.png",
-      tags: ["Flutter", "Dart", "Firebase", "UI/UX"],
+      tags: ["HTML/CSS", "JS", "PHP", "UI/MySql"],
       links: {
         demo: "#",
         github: "#"
@@ -29,23 +29,46 @@ export const Portfolio = () => {
     },
     {
       title: "Plateforme e-commerce",
-      description: "Site web de commerce électronique avec système de paiement intégré et gestion des stocks.",
+      description: "Site web de commerce en ligne pour mikishop",
       image: "/image_original.png",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
+      tags: ["React", "Js", "MySql", ""],
       links: {
         demo: "#",
         github: "#"
       }
     },
     {
-      title: "Dashboard analytique",
-      description: "Tableau de bord interactif pour visualiser et analyser des données commerciales en temps réel.",
-      image: "/placeholder.svg",
-      tags: ["React", "D3.js", "Express", "SQL"],
+      title: "Site de gestion de planning",
+      description: "Tableau de bord interactif pour visualiser le planning et analyser les performances des employées",
+      image: "/plan.png",
+      tags: ["Next js", "Supabase", "Chad cdn", "Next API"],
       links: {
         demo: "#",
         github: "#"
-      }
+      },
+      
+    },
+    {
+      title: "Site d'administartion d'une plateforme e-commerce",
+      description: "Tableau de bord interactif pour visualiser le planning et analyser les performances des employées",
+      image: "/drive.png",
+      tags: ["Next js", "Supabase", "Chad cdn", "Next API"],
+      links: {
+        demo: "#",
+        github: "#"
+      },
+      
+    },
+    {
+      title: "Site vitrine Likita Care",
+      description: "Tableau de bord interactif pour visualiser le planning et analyser les performances des employées",
+      image: "/lkt.png",
+      tags: ["Next js", "Supabase", "Chad cdn", "Next API"],
+      links: {
+        demo: "#",
+        github: "#"
+      },
+      
     }
   ];
 
