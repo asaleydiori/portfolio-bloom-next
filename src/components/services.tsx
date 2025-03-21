@@ -10,44 +10,44 @@ export const Services = () => {
       title: "Développement Web",
       description: "Création de sites web sur mesure, responsive et optimisés pour le référencement",
       icon: <Monitor className="h-8 w-8 text-primary" />,
-      price: "À partir de 150,000 XOF",
-      tags: ["React", "Django", "SEO", "UI/UX"]
+      price: "",
+      tags: ["Next Js","React", "Django", "SEO", "UI/UX"]
     },
     {
       title: "Développement Mobile",
       description: "Applications mobiles natives et multiplateformes pour Android et iOS",
       icon: <Smartphone className="h-8 w-8 text-primary" />,
-      price: "À partir de 200,000 XOF",
+      price: "",
       tags: ["Flutter", "React Native", "Firebase"]
     },
     {
       title: "Design UI/UX",
       description: "Interfaces utilisateur intuitives et expériences utilisateur optimisées",
       icon: <Palette className="h-8 w-8 text-primary" />,
-      price: "À partir de 100,000 XOF",
-      tags: ["Figma", "Adobe XD", "Wireframing"]
+      price: "",
+      tags: ["Figma"]
     },
     {
       title: "Sécurité Informatique",
       description: "Audit de sécurité, protection des données et sécurisation de réseaux",
       icon: <LockKeyhole className="h-8 w-8 text-primary" />,
-      price: "À partir de 250,000 XOF",
+      price: "",
       tags: ["Audit", "Pentesting", "Encryption"]
     },
     {
       title: "Production Vidéo",
       description: "Création de contenu vidéo professionnel, montage et post-production",
       icon: <Video className="h-8 w-8 text-primary" />,
-      price: "À partir de 75,000 XOF",
-      tags: ["Montage", "Animation", "Motion Graphics"]
+      price: "",
+      tags: ["Montage"]
     },
-    {
-      title: "Production Audio",
-      description: "Enregistrement, mixage et mastering pour podcasts, musique et voix off",
-      icon: <Music className="h-8 w-8 text-primary" />,
-      price: "À partir de 50,000 XOF",
-      tags: ["Mixage", "Podcasts", "Sound Design"]
-    }
+    // {
+    //   title: "Production Audio",
+    //   description: "Enregistrement, mixage et mastering pour podcasts, musique et voix off",
+    //   icon: <Music className="h-8 w-8 text-primary" />,
+    //   price: "À partir de 50,000 XOF",
+    //   tags: ["Mixage", "Podcasts", "Sound Design"]
+    // }
   ];
 
   return (

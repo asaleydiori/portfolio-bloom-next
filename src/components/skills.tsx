@@ -12,7 +12,7 @@ export const Skills = () => {
     },
     {
       title: "Frameworks & Technologies",
-      skills: ["React", "ASP.NET Core", "Flutter", "Django", "SQL", "NoSQL"],
+      skills: ["Next js","React", "ASP.NET Core", "Flutter", "Django", "SQL", "NoSQL"],
     },
     {
       title: "Cybersécurité",

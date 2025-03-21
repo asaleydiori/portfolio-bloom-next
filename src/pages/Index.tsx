@@ -19,8 +19,8 @@ const Index = () => {
       <main className="container mx-auto px-4 md:px-8">
         <About />
         <Skills />
-        <Education />
-        <Experience />
+        {/* <Education /> */}
+        {/* <Experience /> */}
         <Services />
         <Portfolio />
         <Contact />

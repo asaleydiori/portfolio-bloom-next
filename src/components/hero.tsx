@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { BadgeCustom } from '@/components/ui/badge-custom';
 import { Mail, Github, Linkedin, ArrowDown } from 'lucide-react';
+import arhim from '@/../public/arhim.png'
 
 export const Hero = () => {
   const [loaded, setLoaded] = useState(false);
@@ -51,18 +52,18 @@ export const Hero = () => {
               }`}
             >
               <Button asChild size="lg" className="rounded-full">
-                <a href="#contact">
+                <a href="mailto:asaleydiori@gmail.com">
                   <Mail className="mr-2 h-4 w-4" /> Me contacter
                 </a>
               </Button>
               <div className="flex space-x-4 mt-4 sm:mt-0">
                 <Button variant="outline" size="icon" className="rounded-full" asChild>
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/asaleydiori/" target="_blank" rel="noopener noreferrer">
                     <Github className="h-4 w-4" />
                   </a>
                 </Button>
                 <Button variant="outline" size="icon" className="rounded-full" asChild>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.linkedin.com/in/abdoul-rahim-saley-diori-4a19b5240/" target="_blank" rel="noopener noreferrer">
                     <Linkedin className="h-4 w-4" />
                   </a>
                 </Button>
@@ -78,8 +79,18 @@ export const Hero = () => {
           >
             <div className="text-center">
               <p className="text-sm text-muted-foreground mb-2">Votre Logo</p>
+              
               <div className="w-32 h-32 rounded-full bg-muted/50 flex items-center justify-center">
-                <span className="text-4xl font-bold text-primary/30">AR</span>
+              {/* <Image
+                  src={arhim}
+                  alt="Picture of the author"
+                  width={50}
+                  height={50}
+                  // width={500} automatically provided
+                  // height={500} automatically provided
+                  // blurDataURL="data:..." automatically provided
+                  // placeholder="blur" // Optional blur-up while loading
+                /> */}
               </div>
             </div>
           </div>

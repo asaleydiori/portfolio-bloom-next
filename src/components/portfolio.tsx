@@ -10,7 +10,7 @@ export const Portfolio = () => {
     {
       title: "Système de détection de pneumonie",
       description: "Système utilisant l'intelligence artificielle pour détecter la pneumonie à partir d'images radiographiques.",
-      image: "/placeholder.svg",
+      image: "/memo.png",
       tags: ["Python", "TensorFlow", "API REST", "Machine Learning"],
       links: {
         demo: "#",
@@ -20,7 +20,7 @@ export const Portfolio = () => {
     {
       title: "Application mobile de gestion",
       description: "Application mobile permettant la gestion des tâches et la coordination d'équipe pour les entreprises.",
-      image: "/placeholder.svg",
+      image: "/image_original6.png",
       tags: ["Flutter", "Dart", "Firebase", "UI/UX"],
       links: {
         demo: "#",
@@ -30,7 +30,7 @@ export const Portfolio = () => {
     {
       title: "Plateforme e-commerce",
       description: "Site web de commerce électronique avec système de paiement intégré et gestion des stocks.",
-      image: "/placeholder.svg",
+      image: "/image_original.png",
       tags: ["React", "Node.js", "MongoDB", "Stripe"],
       links: {
         demo: "#",
@@ -79,7 +79,7 @@ export const Portfolio = () => {
                 </Badge>
               ))}
             </div>
-            <div className="flex gap-3 mt-auto">
+            {/* <div className="flex gap-3 mt-auto">
               <Button variant="outline" size="sm" asChild>
                 <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="mr-2 h-4 w-4" />
@@ -92,7 +92,7 @@ export const Portfolio = () => {
                   Code
                 </a>
               </Button>
-            </div>
+            </div> */}
           </CardHover>
         ))}
       </div>
