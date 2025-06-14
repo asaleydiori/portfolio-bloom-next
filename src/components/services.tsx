@@ -2,85 +2,186 @@
 import { Section } from '@/components/ui/section';
 import { CardHover } from '@/components/ui/card-hover';
 import { BadgeCustom } from '@/components/ui/badge-custom';
-import { Monitor, Smartphone, Palette, LockKeyhole, Video, Music } from 'lucide-react';
+import { Monitor, Smartphone, Palette, LockKeyhole, Video, Server, Database, Shield, Code, Zap } from 'lucide-react';
 
 export const Services = () => {
   const services = [
     {
-      title: "Développement Web",
-      description: "Création de sites web sur mesure, responsive et optimisés pour le référencement",
-      icon: <Monitor className="h-8 w-8 text-primary" />,
-      price: "",
-      tags: ["Next Js","React", "Django", "SEO", "UI/UX"]
+      title: "Développement Web Enterprise",
+      description: "Applications web full-stack avec architecture microservices, optimisation des performances et SEO avancé",
+      icon: <Monitor className="h-10 w-10 text-primary" />,
+      price: "À partir de 2,500,000 XOF",
+      tags: ["Next.js", "React", "Node.js", "PostgreSQL", "Redis"],
+      premium: true,
+      deliverables: ["Architecture scalable", "Tests automatisés", "Documentation complète"]
     },
     {
-      title: "Développement Mobile",
-      description: "Applications mobiles natives et multiplateformes pour Android et iOS",
-      icon: <Smartphone className="h-8 w-8 text-primary" />,
-      price: "",
-      tags: ["Flutter", "React Native", "Firebase"]
+      title: "Applications Mobile Natives",
+      description: "Applications iOS et Android haute performance avec synchronisation cloud et analytics intégrés",
+      icon: <Smartphone className="h-10 w-10 text-primary" />,
+      price: "À partir de 3,000,000 XOF",
+      tags: ["React Native", "Flutter", "Firebase", "Analytics"],
+      premium: true,
+      deliverables: ["Apps natives", "Backend API", "Analytics dashboard"]
     },
     {
-      title: "Design UI/UX",
-      description: "Interfaces utilisateur intuitives et expériences utilisateur optimisées",
-      icon: <Palette className="h-8 w-8 text-primary" />,
-      price: "",
-      tags: ["Figma"]
+      title: "Design UI/UX Premium",
+      description: "Interfaces utilisateur de niveau enterprise avec recherche utilisateur, prototypage et tests d'utilisabilité",
+      icon: <Palette className="h-10 w-10 text-primary" />,
+      price: "À partir de 1,500,000 XOF",
+      tags: ["Figma", "Adobe Suite", "Prototyping", "User Research"],
+      deliverables: ["Design system", "Prototypes interactifs", "Guide de style"]
     },
     {
-      title: "Sécurité Informatique",
-      description: "Audit de sécurité, protection des données et sécurisation de réseaux",
-      icon: <LockKeyhole className="h-8 w-8 text-primary" />,
-      price: "",
-      tags: ["Audit", "Pentesting", "Encryption"]
+      title: "Sécurité & Audit Enterprise",
+      description: "Audits de sécurité complets, tests de pénétration et mise en conformité réglementaire",
+      icon: <Shield className="h-10 w-10 text-primary" />,
+      price: "À partir de 2,000,000 XOF",
+      tags: ["Pentesting", "OWASP", "Conformité", "ISO 27001"],
+      premium: true,
+      deliverables: ["Rapport d'audit", "Plan de remediation", "Formation équipe"]
     },
     {
-      title: "Production Vidéo",
-      description: "Création de contenu vidéo professionnel, montage et post-production",
-      icon: <Video className="h-8 w-8 text-primary" />,
-      price: "",
-      tags: ["Montage"]
+      title: "Infrastructure Cloud",
+      description: "Architecture cloud scalable avec DevOps, CI/CD et monitoring avancé pour une disponibilité 99.9%",
+      icon: <Server className="h-10 w-10 text-primary" />,
+      price: "À partir de 1,800,000 XOF",
+      tags: ["AWS", "Docker", "Kubernetes", "Terraform"],
+      deliverables: ["Infrastructure as Code", "Monitoring", "Backup automatisé"]
     },
-    // {
-    //   title: "Production Audio",
-    //   description: "Enregistrement, mixage et mastering pour podcasts, musique et voix off",
-    //   icon: <Music className="h-8 w-8 text-primary" />,
-    //   price: "À partir de 50,000 XOF",
-    //   tags: ["Mixage", "Podcasts", "Sound Design"]
-    // }
+    {
+      title: "Solutions Blockchain",
+      description: "Smart contracts, DApps et intégrations blockchain pour les entreprises innovantes",
+      icon: <Database className="h-10 w-10 text-primary" />,
+      price: "À partir de 4,000,000 XOF",
+      tags: ["Solidity", "Web3", "Ethereum", "Smart Contracts"],
+      premium: true,
+      deliverables: ["Smart contracts", "DApp frontend", "Documentation technique"]
+    },
+    {
+      title: "Production Vidéo Corporate",
+      description: "Contenu vidéo professionnel, motion graphics et post-production pour communications d'entreprise",
+      icon: <Video className="h-10 w-10 text-primary" />,
+      price: "À partir de 800,000 XOF",
+      tags: ["4K Production", "Motion Graphics", "Color Grading"],
+      deliverables: ["Vidéos finales", "Assets graphiques", "Versions multiples"]
+    },
+    {
+      title: "Consultation Technique",
+      description: "Conseil en architecture logicielle, audit de code et optimisation des performances",
+      icon: <Code className="h-10 w-10 text-primary" />,
+      price: "150,000 XOF/jour",
+      tags: ["Architecture", "Code Review", "Performance"],
+      deliverables: ["Rapport d'analyse", "Recommandations", "Plan d'action"]
+    }
   ];
 
   return (
     <Section 
       id="services" 
-      title="Mes Services" 
-      subtitle="Des solutions complètes pour répondre à tous vos besoins numériques"
+      title="Services Enterprise" 
+      subtitle="Solutions complètes et personnalisées pour accompagner la transformation digitale de votre entreprise"
       delay={100}
+      className="py-24 bg-white"
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="mb-16 text-center">
+        <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 mb-8">
+          <Zap className="w-5 h-5 text-primary" />
+          <span className="text-primary font-semibold premium-text">Certification Enterprise</span>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         {services.map((service, index) => (
           <CardHover 
             key={index} 
-            className="p-6 border bg-card/50 shadow-sm flex flex-col h-full" 
+            className={`premium-card flex flex-col h-full relative overflow-hidden ${
+              service.premium ? 'ring-2 ring-primary/20' : ''
+            }`}
             delay={(index + 1) * 100}
           >
-            <div className="mb-4">{service.icon}</div>
-            <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-            <p className="text-muted-foreground mb-4 flex-grow">{service.description}</p>
-            <div className="flex flex-wrap gap-2 mb-4">
+            {service.premium && (
+              <div className="absolute top-4 right-4 z-10">
+                <div className="px-2 py-1 rounded-full enterprise-gradient text-white text-xs font-semibold">
+                  Premium
+                </div>
+              </div>
+            )}
+
+            <div className="mb-6 relative">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                {service.icon}
+              </div>
+            </div>
+
+            <h3 className="text-xl font-bold mb-4 premium-text text-foreground group-hover:text-primary transition-colors duration-300">
+              {service.title}
+            </h3>
+            
+            <p className="text-muted-foreground mb-6 flex-grow leading-relaxed">
+              {service.description}
+            </p>
+            
+            <div className="flex flex-wrap gap-2 mb-6">
               {service.tags.map((tag, tagIndex) => (
                 <BadgeCustom 
                   key={tagIndex} 
                   variant="secondary"
-                  className="mb-1"
+                  className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors duration-200 text-xs px-2 py-1 rounded-md"
                 >
                   {tag}
                 </BadgeCustom>
               ))}
             </div>
-            <p className="font-semibold text-primary mt-auto">{service.price}</p>
+
+            {service.deliverables && (
+              <div className="mb-6">
+                <h4 className="text-sm font-semibold text-foreground mb-2">Livrables inclus :</h4>
+                <ul className="text-xs text-muted-foreground space-y-1">
+                  {service.deliverables.map((item, idx) => (
+                    <li key={idx} className="flex items-center gap-2">
+                      <div className="w-1 h-1 rounded-full bg-primary"></div>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            <div className="mt-auto pt-4 border-t border-gray-100">
+              <p className="font-bold text-lg text-primary enterprise-gradient bg-clip-text text-transparent">
+                {service.price}
+              </p>
+            </div>
           </CardHover>
         ))}
+      </div>
+
+      {/* Premium guarantee section */}
+      <div className="mt-20 text-center">
+        <div className="max-w-4xl mx-auto p-8 rounded-3xl bg-gradient-to-r from-primary/5 to-primary/10 border border-primary/20">
+          <h3 className="text-2xl font-bold mb-4 premium-text text-foreground">
+            Garantie Satisfaction Enterprise
+          </h3>
+          <p className="text-muted-foreground mb-6 text-lg">
+            Chaque projet est livré avec notre garantie de qualité enterprise : support 24/7, 
+            maintenance incluse pendant 3 mois, et satisfaction garantie à 100%.
+          </p>
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2">
+              <Shield className="w-4 h-4 text-primary" />
+              Support 24/7
+            </div>
+            <div className="flex items-center gap-2">
+              <Zap className="w-4 h-4 text-primary" />
+              Livraison garantie
+            </div>
+            <div className="flex items-center gap-2">
+              <Database className="w-4 h-4 text-primary" />
+              Code source inclus
+            </div>
+          </div>
+        </div>
       </div>
     </Section>
   );

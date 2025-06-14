@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { BadgeCustom } from '@/components/ui/badge-custom';
-import { Mail, Github, Linkedin, ArrowDown } from 'lucide-react';
+import { Mail, Github, Linkedin, ArrowDown, Sparkles, Globe } from 'lucide-react';
 
 export const Hero = () => {
   const [loaded, setLoaded] = useState(false);
@@ -12,59 +12,72 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center py-20 overflow-hidden">
-      {/* Background elements modernisés */}
+    <section className="relative min-h-screen flex items-center py-20 overflow-hidden bg-white">
+      {/* Premium background elements */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute -top-[40%] -right-[30%] w-[60%] h-[60%] rounded-full bg-primary/5 animate-float blur-3xl"></div>
-        <div className="absolute -bottom-[40%] -left-[30%] w-[60%] h-[60%] rounded-full bg-secondary/5 animate-float blur-3xl" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40%] h-[40%] rounded-full bg-primary/3 animate-float blur-2xl" style={{animationDelay: '4s'}}></div>
+        {/* Geometric patterns */}
+        <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-gradient-to-br from-primary/10 to-transparent floating-element blur-sm"></div>
+        <div className="absolute top-40 right-20 w-24 h-24 rounded-full bg-gradient-to-br from-primary/8 to-transparent floating-element"></div>
+        <div className="absolute bottom-40 left-1/4 w-40 h-40 rounded-full bg-gradient-to-br from-primary/5 to-transparent floating-element blur-lg"></div>
+        
+        {/* Grid pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(242,175,5,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(242,175,5,0.02)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+        
+        {/* Radial gradients */}
+        <div className="absolute -top-1/2 -right-1/2 w-full h-full rounded-full bg-gradient-radial from-primary/3 via-transparent to-transparent"></div>
+        <div className="absolute -bottom-1/2 -left-1/2 w-full h-full rounded-full bg-gradient-radial from-secondary/2 via-transparent to-transparent"></div>
       </div>
 
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between mb-12">
-          <div className="max-w-4xl">
-            <BadgeCustom 
-              variant="secondary" 
-              className={`mb-6 bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-all duration-300 opacity-0 ${loaded ? 'animate-fade-in animate-once' : ''}`}
-            >
-              🚀 Développeur & Spécialiste en Sécurité
-            </BadgeCustom>
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between gap-12">
+          {/* Main content */}
+          <div className="max-w-4xl lg:flex-1">
+            {/* Premium badge */}
+            <div className={`inline-flex items-center gap-2 mb-8 opacity-0 ${loaded ? 'animate-fade-in animate-once delay-100' : ''}`}>
+              <BadgeCustom 
+                variant="secondary" 
+                className="bg-gradient-to-r from-primary/10 to-primary/5 text-primary border-primary/20 hover:from-primary/20 hover:to-primary/10 transition-all duration-300 px-4 py-2 text-sm font-medium"
+              >
+                <Sparkles className="w-4 h-4 mr-2" />
+                Développeur & Spécialiste en Sécurité
+              </BadgeCustom>
+              <BadgeCustom 
+                variant="outline" 
+                className="border-primary/30 text-primary hover:bg-primary/10 transition-all duration-300 px-3 py-1 text-xs"
+              >
+                <Globe className="w-3 h-3 mr-1" />
+                Niveau Enterprise
+              </BadgeCustom>
+            </div>
 
-            <h1 
-              className={`text-4xl md:text-5xl lg:text-7xl font-bold mb-8 tracking-tight leading-tight opacity-0 ${
-                loaded ? 'animate-fade-in animate-once delay-100' : ''
-              }`}
-            >
-              Abdoul Rahim{' '}
-              <span className="bg-gradient-to-r from-primary via-primary/80 to-secondary bg-clip-text text-transparent animate-pulse">
-                SALEY DIORI
-              </span>
+            {/* Main title with premium typography */}
+            <h1 className={`text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-8 tracking-tight leading-[0.9] opacity-0 ${loaded ? 'animate-fade-in animate-once delay-200' : ''}`}>
+              <span className="block premium-text text-foreground">Abdoul Rahim</span>
+              <span className="block text-premium enterprise-pulse">SALEY DIORI</span>
             </h1>
 
-            <p 
-              className={`text-xl md:text-2xl text-muted-foreground mb-10 max-w-3xl text-balance leading-relaxed opacity-0 ${
-                loaded ? 'animate-fade-in animate-once delay-200' : ''
-              }`}
-            >
-              Développeur full-stack et spécialiste en sécurité des réseaux et systèmes, 
-              je transforme des idées en{' '}
-              <span className="text-primary font-semibold">solutions numériques sécurisées</span>{' '}
-              et innovantes.
-            </p>
+            {/* Enhanced subtitle */}
+            <div className={`mb-12 opacity-0 ${loaded ? 'animate-fade-in animate-once delay-300' : ''}`}>
+              <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-4 max-w-4xl leading-relaxed premium-text">
+                Développeur full-stack et spécialiste en sécurité des réseaux et systèmes
+              </p>
+              <p className="text-lg md:text-xl text-muted-foreground/80 max-w-3xl leading-relaxed">
+                Je transforme des idées en{' '}
+                <span className="text-premium font-semibold">solutions numériques sécurisées</span>{' '}
+                et innovantes de niveau entreprise.
+              </p>
+            </div>
 
-            <div 
-              className={`flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-6 mb-16 opacity-0 ${
-                loaded ? 'animate-fade-in animate-once delay-300' : ''
-              }`}
-            >
+            {/* Premium CTA section */}
+            <div className={`flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 mb-16 opacity-0 ${loaded ? 'animate-fade-in animate-once delay-400' : ''}`}>
               <Button 
                 asChild 
                 size="lg" 
-                className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="enterprise-gradient hover:shadow-2xl text-white px-10 py-4 text-lg rounded-2xl shadow-xl hover:shadow-primary/25 transition-all duration-500 hover:-translate-y-1 hover:scale-105 font-medium"
               >
-                <a href="mailto:asaleydiori@gmail.com">
-                  <Mail className="mr-3 h-5 w-5" /> 
-                  Me contacter
+                <a href="mailto:asaleydiori@gmail.com" className="flex items-center gap-3">
+                  <Mail className="h-5 w-5" /> 
+                  Démarrer un projet
                 </a>
               </Button>
               
@@ -72,58 +85,68 @@ export const Hero = () => {
                 <Button 
                   variant="outline" 
                   size="icon" 
-                  className="rounded-full border-2 border-primary/30 text-primary hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 w-12 h-12" 
+                  className="rounded-2xl border-2 border-primary/20 text-primary hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 w-14 h-14 hover-lift" 
                   asChild
                 >
                   <a href="https://github.com/asaleydiori/" target="_blank" rel="noopener noreferrer">
-                    <Github className="h-5 w-5" />
+                    <Github className="h-6 w-6" />
                   </a>
                 </Button>
                 <Button 
                   variant="outline" 
                   size="icon" 
-                  className="rounded-full border-2 border-primary/30 text-primary hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 w-12 h-12" 
+                  className="rounded-2xl border-2 border-primary/20 text-primary hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 w-14 h-14 hover-lift" 
                   asChild
                 >
                   <a href="https://www.linkedin.com/in/abdoul-rahim-saley-diori-4a19b5240/" target="_blank" rel="noopener noreferrer">
-                    <Linkedin className="h-5 w-5" />
+                    <Linkedin className="h-6 w-6" />
                   </a>
                 </Button>
               </div>
             </div>
           </div>
 
-          {/* Zone logo modernisée */}
-          <div 
-            className={`w-48 h-48 md:w-64 md:h-64 bg-gradient-to-br from-primary/10 via-white to-secondary/10 rounded-3xl flex items-center justify-center border-2 border-primary/10 mt-8 md:mt-0 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:rotate-3 opacity-0 ${
-              loaded ? 'animate-fade-in animate-once delay-400' : ''
-            }`}
-          >
-            <div className="text-center p-6">
-              <div className="w-36 h-36 md:w-44 md:h-44 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-4 shadow-inner">
-                <div className="text-4xl md:text-5xl font-bold text-primary">
-                  AS
+          {/* Premium logo section */}
+          <div className={`relative opacity-0 ${loaded ? 'animate-fade-in animate-once delay-500' : ''}`}>
+            <div className="w-72 h-72 lg:w-80 lg:h-80 relative">
+              {/* Background decorative elements */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 via-white to-primary/5 blur-3xl"></div>
+              <div className="absolute inset-4 rounded-full bg-gradient-to-br from-primary/5 via-transparent to-primary/10 blur-2xl"></div>
+              
+              {/* Main logo container */}
+              <div className="relative w-full h-full premium-card rounded-full flex items-center justify-center hover-lift border-2 border-primary/10">
+                <div className="text-center p-8">
+                  <div className="w-48 h-48 lg:w-52 lg:h-52 rounded-full enterprise-gradient flex items-center justify-center mb-6 shadow-2xl relative overflow-hidden">
+                    {/* Inner glow effect */}
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/20 to-transparent"></div>
+                    <div className="relative text-6xl lg:text-7xl font-bold text-white premium-text">
+                      AS
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <p className="text-sm font-semibold text-primary premium-text">
+                      Créateur de Solutions
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      Niveau Enterprise
+                    </p>
+                  </div>
                 </div>
               </div>
-              <p className="text-sm text-muted-foreground font-medium">
-                Créateur de Contenu
-              </p>
             </div>
           </div>
         </div>
 
-        <div className="text-center">
+        {/* Premium scroll indicator */}
+        <div className="text-center mt-20">
           <a 
             href="#about" 
-            className={`inline-flex items-center justify-center p-4 rounded-full bg-white/80 border border-primary/20 hover:bg-primary/10 hover:border-primary/40 transition-all duration-300 opacity-0 ${
-              loaded ? 'animate-fade-in animate-once delay-500' : ''
-            } animate-bounce shadow-lg`}
-            style={{
-              animationDuration: '2s',
-              animationIterationCount: 'infinite'
-            }}
+            className={`inline-flex flex-col items-center justify-center gap-2 p-4 rounded-2xl bg-white/80 border border-primary/10 hover:bg-primary/5 hover:border-primary/20 transition-all duration-300 opacity-0 ${loaded ? 'animate-fade-in animate-once delay-700' : ''} group shadow-lg hover:shadow-xl`}
           >
-            <ArrowDown className="h-6 w-6 text-primary" />
+            <span className="text-xs font-medium text-muted-foreground group-hover:text-primary transition-colors duration-300">
+              Découvrir
+            </span>
+            <ArrowDown className="h-5 w-5 text-primary animate-bounce" />
           </a>
         </div>
       </div>
