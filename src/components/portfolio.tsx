@@ -2,7 +2,7 @@
 import { Section } from '@/components/ui/section';
 import { Badge } from '@/components/ui/badge';
 import { CardHover } from '@/components/ui/card-hover';
-import { ExternalLink, Github, Award, TrendingUp } from 'lucide-react';
+import { ExternalLink, Github, Award, TrendingUp, ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export const Portfolio = () => {
