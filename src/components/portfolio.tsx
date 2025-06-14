@@ -78,44 +78,32 @@ export const Portfolio = () => {
       title="Portfolio" 
       subtitle="Une sélection de mes projets les plus significatifs"
       delay={100}
+      className="bg-gradient-to-br from-white/50 to-accent/20 rounded-3xl p-8"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project, index) => (
           <CardHover 
             key={index}
-            className="flex flex-col h-full"
+            className="flex flex-col h-full glass-panel border-2 border-primary/10 hover:border-primary/30"
             delay={(index + 2) * 100}
           >
-            <div className="relative aspect-video w-full mb-4 rounded-lg overflow-hidden bg-muted">
+            <div className="relative aspect-video w-full mb-4 rounded-lg overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10">
               <img 
                 src={project.image} 
                 alt={project.title} 
-                className="object-cover w-full h-full" 
+                className="object-cover w-full h-full transition-transform duration-300 hover:scale-105" 
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
             </div>
-            <h3 className="text-xl font-medium mb-2">{project.title}</h3>
+            <h3 className="text-xl font-medium mb-2 gradient-text">{project.title}</h3>
             <p className="text-muted-foreground mb-4 flex-grow">{project.description}</p>
             <div className="flex flex-wrap gap-2 mb-4">
               {project.tags.map((tag, tagIndex) => (
-                <Badge key={tagIndex} variant="secondary" className="font-medium">
+                <Badge key={tagIndex} className="bg-gradient-to-r from-primary/20 to-secondary/20 text-foreground border-primary/30 font-medium">
                   {tag}
                 </Badge>
               ))}
             </div>
-            {/* <div className="flex gap-3 mt-auto">
-              <Button variant="outline" size="sm" asChild>
-                <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
-                  <ExternalLink className="mr-2 h-4 w-4" />
-                  Démo
-                </a>
-              </Button>
-              <Button variant="outline" size="sm" asChild>
-                <a href={project.links.github} target="_blank" rel="noopener noreferrer">
-                  <Github className="mr-2 h-4 w-4" />
-                  Code
-                </a>
-              </Button>
-            </div> */}
           </CardHover>
         ))}
       </div>
