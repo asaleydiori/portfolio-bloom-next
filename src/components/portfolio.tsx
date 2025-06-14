@@ -31,7 +31,7 @@ export const Portfolio = () => {
       title: "Plateforme e-commerce",
       description: "Site web de commerce en ligne pour mikishop",
       image: "/image_original.png",
-      tags: ["React", "Js", "MySql", ""],
+      tags: ["React", "Js", "MySql"],
       links: {
         demo: "#",
         github: "#"
@@ -41,34 +41,31 @@ export const Portfolio = () => {
       title: "Site de gestion de planning",
       description: "Tableau de bord interactif pour visualiser le planning et analyser les performances des employées",
       image: "/plan.png",
-      tags: ["Next js", "Supabase", "Chad cdn", "Next API"],
+      tags: ["Next.js", "Supabase", "Chad CDN", "Next API"],
       links: {
         demo: "#",
         github: "#"
-      },
-      
+      }
     },
     {
-      title: "Site d'administartion d'une plateforme e-commerce",
-      description: "Tableau de bord interactif pour visualiser le planning et analyser les performances des employées",
+      title: "Site d'administration e-commerce",
+      description: "Tableau de bord interactif pour administrer une plateforme e-commerce",
       image: "/drive.png",
-      tags: ["Next js", "Supabase", "Chad cdn", "Next API"],
+      tags: ["Next.js", "Supabase", "Chad CDN", "Next API"],
       links: {
         demo: "#",
         github: "#"
-      },
-      
+      }
     },
     {
       title: "Site vitrine Likita Care",
-      description: "Tableau de bord interactif pour visualiser le planning et analyser les performances des employées",
+      description: "Site web vitrine moderne pour la plateforme de soins Likita Care",
       image: "/lkt.png",
-      tags: ["Next js", "Supabase", "Chad cdn", "Next API"],
+      tags: ["Next.js", "Supabase", "Chad CDN", "Next API"],
       links: {
         demo: "#",
         github: "#"
-      },
-      
+      }
     }
   ];
 
@@ -78,31 +75,68 @@ export const Portfolio = () => {
       title="Portfolio" 
       subtitle="Une sélection de mes projets les plus significatifs"
       delay={100}
-      className="bg-gradient-to-br from-white/50 to-accent/20 rounded-3xl p-8"
+      className="modern-gradient rounded-3xl p-8 mx-4"
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <CardHover 
             key={index}
-            className="flex flex-col h-full glass-panel border-2 border-primary/10 hover:border-primary/30"
+            className="modern-card flex flex-col h-full group"
             delay={(index + 2) * 100}
           >
-            <div className="relative aspect-video w-full mb-4 rounded-lg overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10">
+            <div className="relative aspect-video w-full mb-6 rounded-xl overflow-hidden bg-gradient-to-br from-primary/5 to-secondary/5">
               <img 
                 src={project.image} 
                 alt={project.title} 
-                className="object-cover w-full h-full transition-transform duration-300 hover:scale-105" 
+                className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" 
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
-            <h3 className="text-xl font-medium mb-2 gradient-text">{project.title}</h3>
-            <p className="text-muted-foreground mb-4 flex-grow">{project.description}</p>
-            <div className="flex flex-wrap gap-2 mb-4">
-              {project.tags.map((tag, tagIndex) => (
-                <Badge key={tagIndex} className="bg-gradient-to-r from-primary/20 to-secondary/20 text-foreground border-primary/30 font-medium">
-                  {tag}
-                </Badge>
-              ))}
+            
+            <div className="flex flex-col flex-grow">
+              <h3 className="text-xl font-semibold mb-3 text-secondary group-hover:text-primary transition-colors duration-300">
+                {project.title}
+              </h3>
+              <p className="text-muted-foreground mb-6 flex-grow leading-relaxed">
+                {project.description}
+              </p>
+              
+              <div className="flex flex-wrap gap-2 mb-6">
+                {project.tags.map((tag, tagIndex) => (
+                  <Badge 
+                    key={tagIndex} 
+                    variant="secondary"
+                    className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors duration-200"
+                  >
+                    {tag}
+                  </Badge>
+                ))}
+              </div>
+
+              <div className="flex gap-3 mt-auto">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="flex-1 border-primary/30 text-primary hover:bg-primary hover:text-white transition-all duration-300"
+                  asChild
+                >
+                  <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Demo
+                  </a>
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="flex-1 border-secondary/30 text-secondary hover:bg-secondary hover:text-white transition-all duration-300"
+                  asChild
+                >
+                  <a href={project.links.github} target="_blank" rel="noopener noreferrer">
+                    <Github className="mr-2 h-4 w-4" />
+                    Code
+                  </a>
+                </Button>
+              </div>
             </div>
           </CardHover>
         ))}
