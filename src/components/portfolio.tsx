@@ -1,13 +1,14 @@
-
 import { Section } from '@/components/ui/section';
 import { Badge } from '@/components/ui/badge';
 import { CardHover } from '@/components/ui/card-hover';
-import { ExternalLink, Github, Award, TrendingUp, ArrowDown } from 'lucide-react';
+import { ExternalLink, Github, Award, TrendingUp, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 export const Portfolio = () => {
   const projects = [
     {
+      id: 'pneumonie-detection',
       title: "Système de détection de pneumonie",
       description: "Solution d'intelligence artificielle de niveau enterprise pour le diagnostic médical automatisé à partir d'images radiographiques.",
       image: "/memo.png",
@@ -20,6 +21,7 @@ export const Portfolio = () => {
       impact: "95% de précision diagnostique"
     },
     {
+      id: 'ecommerce-platform',
       title: "Plateforme e-commerce enterprise",
       description: "Solution complète de commerce électronique avec architecture microservices et capacités de mise à l'échelle enterprise.",
       image: "/image_original.png",
@@ -32,6 +34,7 @@ export const Portfolio = () => {
       impact: "1M+ transactions/mois"
     },
     {
+      id: 'stock-management',
       title: "Application de gestion de stock",
       description: "Système de gestion d'inventaire en temps réel avec analytics avancés et intégration ERP pour Karma Logistique.",
       image: "/image_original6.png",
@@ -43,6 +46,7 @@ export const Portfolio = () => {
       impact: "40% réduction des coûts"
     },
     {
+      id: 'analytics-dashboard',
       title: "Tableau de bord analytique",
       description: "Dashboard interactif avec visualisations de données en temps réel et intelligence d'affaires intégrée.",
       image: "/plan.png",
@@ -54,6 +58,7 @@ export const Portfolio = () => {
       impact: "60% gain productivité"
     },
     {
+      id: 'admin-platform',
       title: "Plateforme d'administration",
       description: "Interface d'administration sécurisée avec gestion des rôles, audit trails et conformité enterprise.",
       image: "/drive.png",
@@ -65,6 +70,7 @@ export const Portfolio = () => {
       impact: "99.9% uptime"
     },
     {
+      id: 'likita-care',
       title: "Plateforme Likita Care",
       description: "Solution de télémédecine avec conformité HIPAA, consultations vidéo sécurisées et dossiers médicaux électroniques.",
       image: "/lkt.png",
@@ -157,10 +163,10 @@ export const Portfolio = () => {
                   className="flex-1 border-2 border-primary/30 text-primary hover:bg-primary hover:text-white transition-all duration-300 rounded-xl font-semibold hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1"
                   asChild
                 >
-                  <a href={project.links.demo} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                  <Link to={`/project/${project.id}`} className="flex items-center justify-center gap-2">
                     <ExternalLink className="h-4 w-4" />
-                    Voir le projet
-                  </a>
+                    Voir détails
+                  </Link>
                 </Button>
                 <Button 
                   variant="outline" 
@@ -195,7 +201,7 @@ export const Portfolio = () => {
           >
             <a href="#contact" className="flex items-center gap-3">
               Commencer maintenant
-              <ArrowDown className="h-5 w-5 rotate-[-90deg]" />
+              <ArrowRight className="h-5 w-5" />
             </a>
           </Button>
         </div>

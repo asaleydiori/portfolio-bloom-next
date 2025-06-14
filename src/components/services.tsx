@@ -10,7 +10,6 @@ export const Services = () => {
       title: "Développement Web Enterprise",
       description: "Applications web full-stack avec architecture microservices, optimisation des performances et SEO avancé",
       icon: <Monitor className="h-10 w-10 text-primary" />,
-      price: "À partir de 2,500,000 XOF",
       tags: ["Next.js", "React", "Node.js", "PostgreSQL", "Redis"],
       premium: true,
       deliverables: ["Architecture scalable", "Tests automatisés", "Documentation complète"]
@@ -19,7 +18,6 @@ export const Services = () => {
       title: "Applications Mobile Natives",
       description: "Applications iOS et Android haute performance avec synchronisation cloud et analytics intégrés",
       icon: <Smartphone className="h-10 w-10 text-primary" />,
-      price: "À partir de 3,000,000 XOF",
       tags: ["React Native", "Flutter", "Firebase", "Analytics"],
       premium: true,
       deliverables: ["Apps natives", "Backend API", "Analytics dashboard"]
@@ -28,7 +26,6 @@ export const Services = () => {
       title: "Design UI/UX Premium",
       description: "Interfaces utilisateur de niveau enterprise avec recherche utilisateur, prototypage et tests d'utilisabilité",
       icon: <Palette className="h-10 w-10 text-primary" />,
-      price: "À partir de 1,500,000 XOF",
       tags: ["Figma", "Adobe Suite", "Prototyping", "User Research"],
       deliverables: ["Design system", "Prototypes interactifs", "Guide de style"]
     },
@@ -36,7 +33,6 @@ export const Services = () => {
       title: "Sécurité & Audit Enterprise",
       description: "Audits de sécurité complets, tests de pénétration et mise en conformité réglementaire",
       icon: <Shield className="h-10 w-10 text-primary" />,
-      price: "À partir de 2,000,000 XOF",
       tags: ["Pentesting", "OWASP", "Conformité", "ISO 27001"],
       premium: true,
       deliverables: ["Rapport d'audit", "Plan de remediation", "Formation équipe"]
@@ -45,7 +41,6 @@ export const Services = () => {
       title: "Infrastructure Cloud",
       description: "Architecture cloud scalable avec DevOps, CI/CD et monitoring avancé pour une disponibilité 99.9%",
       icon: <Server className="h-10 w-10 text-primary" />,
-      price: "À partir de 1,800,000 XOF",
       tags: ["AWS", "Docker", "Kubernetes", "Terraform"],
       deliverables: ["Infrastructure as Code", "Monitoring", "Backup automatisé"]
     },
@@ -53,7 +48,6 @@ export const Services = () => {
       title: "Solutions Blockchain",
       description: "Smart contracts, DApps et intégrations blockchain pour les entreprises innovantes",
       icon: <Database className="h-10 w-10 text-primary" />,
-      price: "À partir de 4,000,000 XOF",
       tags: ["Solidity", "Web3", "Ethereum", "Smart Contracts"],
       premium: true,
       deliverables: ["Smart contracts", "DApp frontend", "Documentation technique"]
@@ -62,7 +56,6 @@ export const Services = () => {
       title: "Production Vidéo Corporate",
       description: "Contenu vidéo professionnel, motion graphics et post-production pour communications d'entreprise",
       icon: <Video className="h-10 w-10 text-primary" />,
-      price: "À partir de 800,000 XOF",
       tags: ["4K Production", "Motion Graphics", "Color Grading"],
       deliverables: ["Vidéos finales", "Assets graphiques", "Versions multiples"]
     },
@@ -70,7 +63,6 @@ export const Services = () => {
       title: "Consultation Technique",
       description: "Conseil en architecture logicielle, audit de code et optimisation des performances",
       icon: <Code className="h-10 w-10 text-primary" />,
-      price: "150,000 XOF/jour",
       tags: ["Architecture", "Code Review", "Performance"],
       deliverables: ["Rapport d'analyse", "Recommandations", "Plan d'action"]
     }
@@ -147,12 +139,6 @@ export const Services = () => {
                 </ul>
               </div>
             )}
-
-            <div className="mt-auto pt-4 border-t border-gray-100">
-              <p className="font-bold text-lg text-primary enterprise-gradient bg-clip-text text-transparent">
-                {service.price}
-              </p>
-            </div>
           </CardHover>
         ))}
       </div>
